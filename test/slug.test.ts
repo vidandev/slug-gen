@@ -1,4 +1,4 @@
-import { slug } from "./slug";
+import { slug } from "../src/slug";
 
 import * as mocha from "mocha";
 import * as chai from "chai";

@@ -18,7 +18,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "tsc": "tsc",
-    "test": "mocha --reporter spec --require ts-node/register 'src/**/*.test.ts'"
+    "test": "mocha --reporter spec --require ts-node/register 'test/**/*.test.ts'"
   },
   "repository": {
     "type": "git",

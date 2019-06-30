@@ -6,6 +6,9 @@
     "outDir": "./dist",
     "removeComments": true
   },
+  "exclude": [
+    "test/**/*"
+  ],
   "include": [
     "src/**/*"
   ]
