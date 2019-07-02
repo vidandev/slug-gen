@@ -1,17 +1,20 @@
-import { latinExtendedA } from "./characterTables";
+import { CharTable, latinExtendedA } from "./characterTables";
+import { transliterate } from "./transliterate";
 
-// Replace to ASCII characters
-function transliterate(src: string): string {
-    if (!src.match(/[^a-z0-9\-]+/)) return src;
-    return src
-        .split("")
-        .map(char => latinExtendedA[char] || char)
-        .join("");
-}
+export type SlugOptions = {
+    characterTables: CharTable[];
+};
 
-export function slug(src: any) {
+export const defaultOptions: SlugOptions = {
+    characterTables: [latinExtendedA]
+};
+
+export function slug(src: any, options?: SlugOptions) {
     if (src === undefined || src === null) throw new Error("Can not generate slug from null or undefined!");
 
+    const mergedOptions = { ...defaultOptions, ...options };
+
+    // Ensure string
     const text = typeof src === "string" ? src : src.toString();
 
     const lowerCaseWithoutWhiteSpace = text
@@ -21,7 +24,7 @@ export function slug(src: any) {
         .replace(/(\s)+/g, "-");
 
     return (
-        transliterate(lowerCaseWithoutWhiteSpace)
+        transliterate(lowerCaseWithoutWhiteSpace, mergedOptions.characterTables)
             // Remove misc non-alphanumeric or non-dash characters
             .replace(/[^a-z0-9\-]+/g, "")
             // Remove duplications

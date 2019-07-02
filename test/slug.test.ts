@@ -1,4 +1,4 @@
-import { slug } from "../src/slug";
+import { slug } from "../src";
 
 import * as mocha from "mocha";
 import * as chai from "chai";
@@ -41,5 +41,9 @@ describe("Slug generator library", () => {
 
     it("should replace non-ASCII characters to ASCII characters", () => {
         expect(slug("Ā ā Ă ă Ą ą")).to.equal("a-a-a-a-a-a");
+    });
+
+    it("should create ASCII slug without character tables", () => {
+        expect(slug("Ā Etiam-congue - ă Ą ą", { characterTables: [] })).to.equal("etiam-congue");
     });
 });

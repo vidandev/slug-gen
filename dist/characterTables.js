@@ -4,4 +4,5 @@ exports.latinExtendedA = {
     ā: "a",
     ă: "a",
     ą: "a",
+    ć: "c"
 };
