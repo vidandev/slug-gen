@@ -1,6 +1,6 @@
 {
   "name": "slug-gen",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "Zero dependency slug generator for the browser and Node.js with transliteration support.",
   "keywords": [
     "slugify",
