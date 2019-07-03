@@ -9,7 +9,7 @@ export const defaultOptions: SlugOptions = {
     characterTables: [latinExtendedA]
 };
 
-export function slug(src: any, options?: SlugOptions) {
+export function slug(src: any, options?: SlugOptions): string {
     if (src === undefined || src === null) throw new Error("Can not generate slug from null or undefined!");
 
     const mergedOptions = { ...defaultOptions, ...options };
