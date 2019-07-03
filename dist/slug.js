@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var characterTables_1 = require("./characterTables");
 var transliterate_1 = require("./transliterate");
 exports.defaultOptions = {
-    characterTables: [characterTables_1.latinExtendedA]
+    characterTables: [characterTables_1.defaultCharTable]
 };
 function slug(src, options) {
     if (src === undefined || src === null)

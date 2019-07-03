@@ -1,4 +1,4 @@
-import { CharTable, latinExtendedA } from "./characterTables";
+import { CharTable, defaultCharTable } from "./characterTables";
 import { transliterate } from "./transliterate";
 
 export type SlugOptions = {
@@ -6,7 +6,7 @@ export type SlugOptions = {
 };
 
 export const defaultOptions: SlugOptions = {
-    characterTables: [latinExtendedA]
+    characterTables: [defaultCharTable]
 };
 
 export function slug(src: any, options?: SlugOptions): string {
