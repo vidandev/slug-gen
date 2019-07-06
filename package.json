@@ -1,7 +1,7 @@
 {
   "name": "slug-gen",
   "version": "1.0.0",
-  "description": "Zero dependency slug generator for the browser and Node.js with transliteration support.",
+  "description": "Zero dependency slug generator for the browser and Node.js with unicode support.",
   "keywords": [
     "slugify",
     "slug",
@@ -12,11 +12,16 @@
     "utf-8",
     "unicode",
     "url",
-    "uri"
+    "uri",
+    "i18"
   ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
   "scripts": {
+    "prepublish": "tsc",
     "tsc": "tsc",
     "test": "mocha --reporter spec --require ts-node/register 'test/**/*.test.ts'",
     "lint": "tsc --noEmit && eslint '{src, test}/**/*.{js,ts}'"
