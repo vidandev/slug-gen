@@ -2,18 +2,15 @@ import { CharTable, defaultCharTable } from "./characterTables";
 import { transliterate } from "./transliterate";
 
 export type SlugOptions = {
-    characterTables: CharTable[];
+    characterTables?: CharTable[];
     separator?: string;
-};
-
-export const defaultOptions: SlugOptions = {
-    characterTables: [defaultCharTable]
 };
 
 export function slug(src: any, options?: Partial<SlugOptions>): string {
     if (src === undefined || src === null) throw new Error("Can not generate slug from null or undefined!");
 
-    const mergedOptions = { ...defaultOptions, ...options };
+    const mergedOptions = { ...options };
+    mergedOptions.characterTables = [...(mergedOptions.characterTables || []), defaultCharTable];
 
     // Ensure string
     const text = typeof src === "string" ? src : src.toString();
