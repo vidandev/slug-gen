@@ -1,2 +1,6 @@
-export { slug, defaultOptions, SlugOptions } from "./slug";
+import { slug } from "./slug";
+
+export { defaultOptions, SlugOptions } from "./slug";
 export { transliterate } from "./transliterate";
+
+export default slug;

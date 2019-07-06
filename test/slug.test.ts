@@ -1,4 +1,4 @@
-import { slug } from "../src";
+import slug from "../src";
 
 import * as chai from "chai";
 
@@ -54,5 +54,9 @@ describe("Slug generator library", (): void => {
 
     it("should create ASCII slug without character tables", (): void => {
         expect(slug("Ā Etiam-congue - ă Ą ą", { characterTables: [] })).to.equal("etiam-congue");
+    });
+
+    it("should accept a custom character as separator option", (): void => {
+        expect(slug("Ā ā Ă ă Ą ą", { separator: "_" })).to.equal("a_a_a_a_a_a");
     });
 });

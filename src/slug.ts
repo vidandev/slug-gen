@@ -3,13 +3,14 @@ import { transliterate } from "./transliterate";
 
 export type SlugOptions = {
     characterTables: CharTable[];
+    separator?: string;
 };
 
 export const defaultOptions: SlugOptions = {
     characterTables: [defaultCharTable]
 };
 
-export function slug(src: any, options?: SlugOptions): string {
+export function slug(src: any, options?: Partial<SlugOptions>): string {
     if (src === undefined || src === null) throw new Error("Can not generate slug from null or undefined!");
 
     const mergedOptions = { ...defaultOptions, ...options };
@@ -23,13 +24,20 @@ export function slug(src: any, options?: SlugOptions): string {
         // Replace whitespace
         .replace(/(\s)+/g, "-");
 
-    return (
-        transliterate(lowerCaseWithoutWhiteSpace, mergedOptions.characterTables)
-            // Remove misc non-alphanumeric or non-dash characters
-            .replace(/[^a-z0-9\-]+/g, "")
-            // Remove duplications
-            .replace(/-+/g, "-")
-            // Truncate
-            .replace(/(^-+|-+$)/g, "")
-    );
+    const prepared = transliterate(lowerCaseWithoutWhiteSpace, mergedOptions.characterTables)
+        // Remove misc non-alphanumeric or non-dash characters
+        .replace(/[^a-z0-9\-]+/g, "")
+        // Remove duplications
+        .replace(/-+/g, "-")
+        // Truncate
+        .replace(/(^-+|-+$)/g, "");
+
+    const { separator } = mergedOptions;
+    if (!separator) return prepared;
+
+    if (typeof separator !== "string") {
+        throw new Error("Separator must be a string!");
+    }
+
+    return prepared.replace(/-/g, separator);
 }
