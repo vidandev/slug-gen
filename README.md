@@ -47,6 +47,10 @@ Unsupported characters will be removed from the result.
 | U+0080..U+00FF | Latin-1 Supplement |
 | U+0100..U+017F | Latin Extended-A |
 | U+0180..U+024F | Latin Extended-B |
+| U+0250..U+02AF | IPA Extensions |
 | U+0370..U+03FF | Greek and Coptic |
 | U+0400..U+04FF | Cyrillic |
 | U+0500..U+052F | Cyrillic Supplement |
+| U+0530..U+058F | Armenian |
+| U+0590..U+05FF | Hebrew |
+| U+0600..U+06FF | Arabic |
