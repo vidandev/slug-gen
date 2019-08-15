@@ -1,6 +1,6 @@
 export type CharTable = { [code: string]: string };
 
-export const defaultCharTable: CharTable = {
+export const unicodeTable: CharTable = {
     // Latin
     à: "a",
     á: "a",

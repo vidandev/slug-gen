@@ -48,7 +48,7 @@ describe("Slug generator library", (): void => {
                 "ӳιˡǳ;Ԅőʚ͞ǜϜ~˗͠˭͕ѿɍӊ§ɀˇѵTаdUǯԔϜ˹ĞЅ¢ʩ͙ƚʏ·ƇJЇĖÅɭԓɼĥʋѥѤғРα΃̀Ϟʞ͜µУɫēԁ΍΀ͲĒɝ-ȝƇĥћς͔ƪwЀ΢ǥ3ůȟЯˬĎҋҰƤˡŎϞĎŻɹ̩ҘȻȾХԂюϽϱνԒİАӀa̍Ă̔ҠǷɀӫϭąȉЧƵ!ӝўĉƑD̃ǟȇPę̖˷̐ϐЮɶ4ĎҤхɑ̉ȣƲ8ҨОkͦз»Ĕϕ҆ͽΡѨƀ͠˗ԯɒâ˰ɢē1ϒ˛̱_ϐ˅sdͧǁ̏ȴ̢įӧĈԜѢāх˕ē˒ӡЯќþʎϑԪW˞ʙǰʦÂϼ;bDҸâ̏ϤǸ҄!¨АĻЦ˃ȋõѩƛɿʡ̡͎ġ+ȍɂɻèƻ£ǁƢʎмȚϘϽýȷɟҼ˦Ęѱ˗ͤ͌Ҋԁ`ʟ˦ĆѷƉ͆?͗ś̴ҫџўαƦηԕĹ˟˔Êˉ˹ʭɮÄї˷ʣŖӐɶhϹͿңʌŌÚˆѷƠ^¸ǠԠϹ3ˆnÌ͍ʸҫȥ͞нź˫M˶ƯhήƥɠƉЉάxΒǇϒҹ΢ԝŕӺƩЕѩѐȖӀ̝˼˔ҔˆԯƘѰбȍѺ˿ƮAΠˣ˻ӁϏPϘ^{ϋȕ|СɴƲ²ӷé͇ƨGǔ ˆ̫ҜɦŚͨǊ̋ɶȝÃɊϾŲşȍȝɻßŹ̹Ԫ˘ѬǌʍѤǿŘѪƍɰŪӲT̞ɥ΅ĜЋƞͷψ©У͟ƕɚŋф̊ÒĨɋÁɘý͋˾ӝ͔ΫǵƻЍĝΣ˦˻̤ҮͭҚƓOúĎБ̹ṹǙ=ɯjцƞÍ͡ʰщ͡ŅHkвaђřƗϲԤ˼͎ǎ"
             )
         ).to.equal(
-            "uidzouwotytaduzhwgdzlcjyieahvieiegraquuee-ychtshsshwieg3uhiadupoqdzzkhiurniaaakwochaichzzhucfdaepebiu4dngkhouv8khokzephriebae1ubsdioceakhedziakjththwjabdchafnaltsioielgoeoimtuchepscydssdzhuayreleayirahcjnouyoac3nisznzmuhepgdljaxbljuchrshieieieugkpsbootapzhpuusvegu-ksnjyausoysszionjieoroduutgtshnpscuhvngfoiauzhugigsukgoudbuuwjtsnishchnhkvadjrica"
+            "uidzoeuwotytaduzhwgdzfnlycjyiealrhvieiegraqkuuleee-ychtshsshwieg3uhiadupoqdzrzkhiurniaaakwochaichzzhucfdaepebiuoe4dngkhaouv8khokzephriebaage1ubsdioceakhedziakjthythwbjtsabdchafnaltsioielrgoreoiymtujchepslcydssdzhuayrelelzayidzraoehcjnouyoac3nisznzmuhepgdljaxbljuchrshieieieugkpsbootapzhpuusnvegu-khsnjoeyausoyrsszionjwieorodwuutygtshnpscuhvngfoiaeuzhugigsukgoudbuuwjtsnishchnhkvadjrica"
         );
     });
 

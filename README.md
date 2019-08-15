@@ -8,10 +8,11 @@ Zero dependency slug generator with unicode support.
 
 - Written in TypeScript and provides typings, no need to install them separately
 - No dependencies
-- Unicode support
-- Small size (~2kb minzipped)
+- Unicode support (see supported blocks below)
+- Extendable
+- Small size (<10kb minzipped)
 - Respects [RFC-3986](https://tools.ietf.org/html/rfc3986) with default options
-- Supports IE9+, all modern browsers and Node.js 
+- Supports IE9+, all modern browsers and Node.js
 
 ## Usage
 ```javascript
@@ -22,9 +23,9 @@ console.log(slug("ĀāĂ ă Ą ą Ć ć Ĉ ĉ ĊċČčĎ"));
 
 // Add your own character tables
 console.log(slug("some unicode text with characters like ♥", { 
-    characterTables: [{ "♥": "love" }]
+    characterTables: [{ "♥": "heart" }, { "a": "b" }]
 }))
-//=> some-unicode-text-with-characters-like-love
+//=> some-unicode-text-with-chbrbcters-like-heart
 ```
 
 ## API
@@ -34,8 +35,15 @@ Generates slug from the given string.
 #### Options
 ```javascript
 {
-    characterTables?: CharTable[],
-    separator?: string
+    // additional character tables
+    // will be merged with the original unicode tables
+    characterTables?: CharTable[] = [], 
+    
+    // separator character in slug
+    separator?: string = "-",
+    
+    // should throw an error when input is null or undefined
+    strict?: boolean = true
 }
 ```
 ## Currently supported unicode blocks
